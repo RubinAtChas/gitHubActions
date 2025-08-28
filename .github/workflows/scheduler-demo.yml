@@ -1,0 +1,14 @@
+name: scheduler demo job
+
+on:
+  schedule:
+
+  - cron: "*/5 * * * *"
+workflow_dispatch:
+
+jobs:
+  scheduler_every-5-minute:
+    runs-on: ubunto-latest
+    steps:
+      - name: Print message
+        run: echo "hello my friend..." 
